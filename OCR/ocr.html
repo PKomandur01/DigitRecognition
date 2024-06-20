@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Include JavaScript file for OCR functionality -->
+    <script src="ocr.js"></script>
+    <!-- Include CSS file for styling -->
+    <link rel="stylesheet" type="text/css" href="ocr.css">
+</head>
+<body onload="ocrDemo.onLoadFunction()">
+    <!-- Main container with centered text -->
+    <div id="main-container" style="text-align: center;">
+        <!-- Heading for the OCR demo -->
+        <h1>OCR</h1>
+        <!-- Canvas for drawing digits -->
+        <canvas id="canvas" width="200" height="200"></canvas>
+        <!-- Form for input elements -->
+        <form name="input">
+            <!-- Input field for entering the digit -->
+            <p>Digit: <input id="digit" type="text"> </p>
+            <!-- Button to train the OCR network -->
+            <input type="button" value="Train" onclick="ocrDemo.train()">
+            <!-- Button to test the OCR network -->
+            <input type="button" value="Test" onclick="ocrDemo.test()">
+            <!-- Button to reset the canvas -->
+            <input type="button" value="Reset" onclick="ocrDemo.resetCanvas();"/>
+        </form> 
+    </div>
+</body>
+</html>
